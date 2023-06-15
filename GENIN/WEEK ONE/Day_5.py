@@ -46,5 +46,58 @@ for number in range(1,101) :
         print("Buzz")
     else :
         print(number)
+
+# PASSWORD GENERATOR
+import random
+letters =["a","b","c" ,"d" ,"e","f","g" ,"h" ,"i","j","k" ,"l" ,"m","o",
+ "p" ,"q" ,"r","s","t" ,"u" ,"v","w","y" ,"z" ,"A","B","C" ,"D" ,"E","F",
+"G" ,"H" ,"I","J","K" ,"L" ,"M","N",  "O" ,"P" ,"Q","Z",]
+numbers =["1" ,"2" ,"3","4","5" ,"6" ,"7","8","9" ,"0" ]
+symbols =["!" ,"#" ,"$","%","&" ,"(" ,")","*","+"]
+
+print("Welcome to the PyPassword generator")
+nr_letr=int(input("How many letters would you like in your password \n"))
+n_numba=int(input("How many numbers would you like in your password \n"))
+n_symbols=int(input("How many symbols would you like in your password \n"))
+password = ""
+#EAZY LEVEL
+# for chr in range(1, nr_letr + 1) :
+#  # rand_ch=random.choice(letters)
+#   #print(rand_ch)
+#   password+= random.choice(letters)
+#   #print(password)
+# for chr in range(1, n_numba + 1) :
+#   password+= random.choice(numbers)
+# for chr in range(1, n_symbols + 1) :
+#   password+= random.choice(symbols)
+
+# print( f" Your password is {password}")  
+#EAZY LEVEL
+
+#HARD LeVeL
+password_l=[]
+
+for chr in range(1, nr_letr + 1) :
+  password_l.append (random.choice(letters))
+
+for chr in range(1, n_numba + 1) :
+  password_l. append (random.choice(numbers))
+for chr in range(1, n_symbols + 1) :
+  password_l.append (random.choice(symbols))
+
+#print( f" Your password is {password_l}")  
+random.shuffle(password_l)
+#print( f" Your password is {password_l}")
+
+password=""
+for char in password_l :
+  password += char
+print ( f" Your password is{password}")
+
+# buhk= str(letters[:nr_letr])
+# fuki= str(numbers[:n_numba])
+# fret= str(symbols[:n_symbols])
+
+
         
 
